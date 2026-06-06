@@ -19,9 +19,9 @@ export const NAV_LINKS: NavLink[] = [
 
 export const STATS: Stat[] = [
   { value: 23, suffix: "", label: "Years of Ministry" },
-  { value: 2500, suffix: "+", label: "Active Members" },
+  { value: 600, suffix: "+", label: "Active Members" },
   { value: 14, suffix: "", label: "Ministries" },
-  { value: 40, suffix: "K+", label: "Lives Touched" },
+  { value: 20, suffix: "K+", label: "Lives Touched" },
 ];
 
 export const SERVICES: ServiceTime[] = [
