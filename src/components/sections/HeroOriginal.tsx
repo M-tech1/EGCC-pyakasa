@@ -139,13 +139,13 @@ export default function Hero() {
       {/* ── centred hero body ── */}
       <div className="wrap hero-inner">
         {/* decorative gold line */}
-        {/* <div className="hero-deco-line" aria-hidden="true">
+        <div className="hero-deco-line" aria-hidden="true">
           <span className="deco-dot" />
           <span className="deco-bar" />
           <span className="deco-cross">✛</span>
           <span className="deco-bar" />
           <span className="deco-dot" />
-        </div> */}
+        </div>
 
         {/* eyebrow */}
         <span className="eyebrow center">{SITE.motto}</span>

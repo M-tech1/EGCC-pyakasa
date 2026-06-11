@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Crest from "@/components/shared/Crest";
 import Icon from "@/components/shared/Icon";
 import { NAV_LINKS } from "@/data/site";
@@ -12,13 +13,16 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -29,29 +33,30 @@ export default function Header() {
       <header className={`site-header${scrolled ? " scrolled" : ""}`}>
         <div className="wrap">
           <nav>
-            <a className="brand" href="#top" aria-label={SITE.name}>
+            <Link className="brand" href="/" aria-label={SITE.name}>
               <Crest className="crest" />
               <span className="bt">
                 <b>{SITE.shortName}</b>
                 <span>{SITE.district}</span>
               </span>
-            </a>
+            </Link>
 
             <ul className="nav-links">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href}>{l.label}</a>
+                  <Link href={l.href}>{l.label}</Link>
                 </li>
               ))}
             </ul>
 
             <div className="nav-cta">
-              <a href="#giving" className="btn btn-ghost">
+              <Link href="/#giving" className="btn btn-ghost">
                 Give
-              </a>
-              <a href="#plan" className="btn btn-gold">
+              </Link>
+
+              <Link href="/#plan" className="btn btn-gold">
                 Visit Us
-              </a>
+              </Link>
             </div>
 
             <button
@@ -82,6 +87,7 @@ export default function Header() {
               <span>{SITE.district}</span>
             </span>
           </span>
+
           <button aria-label="Close menu" onClick={() => setMenuOpen(false)}>
             <svg
               viewBox="0 0 24 24"
@@ -94,23 +100,26 @@ export default function Header() {
             </svg>
           </button>
         </div>
+
         {NAV_LINKS.map((l) => (
-          <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>
+          <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)}>
             {l.label}
-          </a>
+          </Link>
         ))}
-        <a href="#giving" onClick={() => setMenuOpen(false)}>
+
+        <Link href="/#giving" onClick={() => setMenuOpen(false)}>
           Give
-        </a>
-        <a
-          href="#plan"
+        </Link>
+
+        <Link
+          href="/#plan"
           className="btn btn-gold"
           style={{ fontSize: ".9rem" }}
           onClick={() => setMenuOpen(false)}
         >
           Visit Us
           <Icon name="arrowRight" />
-        </a>
+        </Link>
       </div>
     </>
   );

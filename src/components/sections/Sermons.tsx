@@ -35,7 +35,10 @@ export default function Sermons() {
                   {s.speaker} · {s.date}
                 </div>
                 <div className="ser-actions">
-                  <a href="#">
+                  <a
+                    href={s.url ?? "#"}
+                    {...(s.url ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  >
                     <PlayIcon />
                     Watch
                   </a>

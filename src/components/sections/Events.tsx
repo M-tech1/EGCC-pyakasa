@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Reveal from "@/components/shared/Reveal";
 import Icon from "@/components/shared/Icon";
 import { FEATURED_EVENT, EVENTS } from "@/data/site";
+import eventsImg from "../../../public/assets/events/events.jpeg";
 
 export default function Events() {
   return (
@@ -19,7 +21,13 @@ export default function Events() {
       <div className="wrap">
         <div className="ev-layout">
           <Reveal className="ev-feature">
-            <div className="mg" />
+            <Image
+              src={eventsImg}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
+              alt={FEATURED_EVENT.title}
+              sizes="(max-width: 680px) 100vw, (max-width: 1024px) 100vw, 58vw"
+            />
             <div className="ev-date">
               <b>{FEATURED_EVENT.day}</b>
               <span>{FEATURED_EVENT.month}</span>

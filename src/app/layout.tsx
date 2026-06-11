@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Mulish } from "next/font/google";
 import { SITE, LOCATION } from "@/constants";
+import Loader from "@/components/shared/Loader";
 import "./globals.css";
 
 const serif = Cormorant_Garamond({
@@ -49,6 +50,11 @@ export const metadata: Metadata = {
     description: "A Spirit-filled, welcoming family in Pyakasa, Abuja. Come as you are.",
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: "/egcc-logo.png",
+    apple: "/egcc-logo.png",
+    shortcut: "/egcc-logo.png",
+  },
 };
 
 export const viewport: Viewport = {
@@ -80,6 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body>
+        <Loader />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {children}
       </body>

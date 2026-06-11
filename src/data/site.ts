@@ -9,12 +9,12 @@ import type {
 } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "About", href: "#welcome" },
-  { label: "Services", href: "#services" },
-  // { label: "Ministries", href: "#ministries" },
-  { label: "Sermons", href: "#sermons" },
-  { label: "Events", href: "#events" },
-  { label: "Prayer", href: "#prayer" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/#services" },
+  // { label: "Ministries", href: "/#ministries" },
+  { label: "Sermons", href: "/#sermons" },
+  { label: "Events", href: "/#events" },
+  { label: "Prayer", href: "/#prayer" },
 ];
 
 export const STATS: Stat[] = [
@@ -64,6 +64,11 @@ export const MINISTRIES: Ministry[] = [
     description:
       "Bible-based fun where little ones learn to love Jesus in a safe, joyful space.",
     href: "#",
+    gradient: "linear-gradient(150deg, #0a1c52, #1545b8)",
+    details:
+      "Our Children's Ministry (ages 0–12) is a vibrant, nurturing environment where every child is known by name. Through age-appropriate Bible lessons, worship, creative arts, and games, we help children build a lasting foundation in faith. We run Sunday School during both services and a midweek after-school club. All our volunteers are trained and vetted in child-safeguarding best practices — every child is safe and cherished here.",
+    leader: "Sis. [Name]",
+    meetingTime: "Sundays · Both Services",
   },
   {
     icon: "youth",
@@ -71,6 +76,11 @@ export const MINISTRIES: Ministry[] = [
     description:
       "Raising a bold generation rooted in Christ through worship and discipleship.",
     href: "#",
+    gradient: "linear-gradient(150deg, #0d2264, #1e3fa0)",
+    details:
+      "Our Youth Ministry (ages 13–25) exists to raise a bold generation deeply rooted in Christ and prepared to impact the world. Through weekly meetings, discipleship groups, youth camps, and community outreach, we challenge young people to live out their faith with courage. We also run a university fellowship arm that connects students across campuses in Abuja.",
+    leader: "Bro. [Name]",
+    meetingTime: "Saturdays · 4:00 PM",
   },
   {
     icon: "women",
@@ -78,6 +88,11 @@ export const MINISTRIES: Ministry[] = [
     description:
       "Sisterhood, prayer, and purpose — women growing strong in faith together.",
     href: "#",
+    gradient: "linear-gradient(150deg, #1a0a52, #3d1f90)",
+    details:
+      "The Women's Ministry — Daughters of Zion — is a sisterhood of faith where women of all ages connect, grow, and serve together. Through Bible studies, prayer retreats, mentoring, and skill-development workshops, we equip women to thrive in every role God has called them to. Monthly meetings are held on the first Saturday of each month, with quarterly retreats.",
+    leader: "Sis. [Name]",
+    meetingTime: "1st Saturday · Monthly",
   },
   {
     icon: "men",
@@ -85,6 +100,11 @@ export const MINISTRIES: Ministry[] = [
     description:
       "Men of integrity, leading homes and community in the fear of God.",
     href: "#",
+    gradient: "linear-gradient(150deg, #06122e, #0e2256)",
+    details:
+      "The Men's Ministry — Valiant Men — is committed to raising men of integrity who lead their families, workplaces, and community in the fear of God. We meet monthly for fellowship, prayer, and the Word. Our annual Men's Conference draws men from across the district, and our weekly accountability groups provide ongoing support for men at every stage of life. Iron sharpens iron here.",
+    leader: "Bro. [Name]",
+    meetingTime: "Last Saturday · Monthly",
   },
   {
     icon: "worship",
@@ -92,6 +112,11 @@ export const MINISTRIES: Ministry[] = [
     description:
       "Lifting holy hands and voices, ushering the presence of God into every service.",
     href: "#",
+    gradient: "linear-gradient(150deg, #0c1a52, #8a6020)",
+    details:
+      "Our Worship Ministry serves as gatekeepers of God's presence in every service, leading the congregation in heartfelt, spirit-filled praise. The ministry includes the choir, band, media and sound team, and ushers — all working together to create an atmosphere where God is glorified and hearts are transformed. New member auditions and onboarding are held every quarter.",
+    leader: "Bro. [Name]",
+    meetingTime: "Rehearsals · Saturdays 2:00 PM",
   },
   {
     icon: "outreach",
@@ -99,6 +124,11 @@ export const MINISTRIES: Ministry[] = [
     description:
       "Winning all — taking the Gospel and compassion beyond our walls.",
     href: "#",
+    gradient: "linear-gradient(150deg, #082840, #10446e)",
+    details:
+      "The Outreach & Missions Ministry is the hands and feet of the church in the wider community and beyond. From medical outreaches and food distribution to evangelism campaigns and prison ministry, we take the Gospel and God's love outside our walls. We also support missionaries and church-planting efforts across Nigeria through the broader ECWA network.",
+    leader: "Bro. [Name]",
+    meetingTime: "Community days · Monthly",
   },
 ];
 
@@ -145,6 +175,7 @@ export const SERMONS: Sermon[] = [
     speaker: "Rev. [Pastor's Name]",
     date: "June 1, 2026",
     duration: "42:18",
+    url: "https://www.facebook.com/share/r/1BBXovbW5o/",
   },
   {
     series: "Series · Faith That Wins",
@@ -152,6 +183,7 @@ export const SERMONS: Sermon[] = [
     speaker: "Pastor [Name]",
     date: "May 25, 2026",
     duration: "38:05",
+    url: "https://www.facebook.com/share/r/1LiG7PuvRM/",
   },
   {
     series: "Series · The Spirit-Filled Life",

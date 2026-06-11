@@ -14,8 +14,9 @@ export default function LocationMap() {
         </Reveal>
         <Reveal delay={0.2}>
           <p className="sec-sub">
-            We&apos;re in the heart of Pyakasa, off Airport Road in Lugbe. There&apos;s free parking and a warm welcome
-            team waiting to meet you.
+            We&apos;re in the heart of Pyakasa, off Airport Road in Lugbe.
+            There&apos;s free parking and a warm welcome team waiting to meet
+            you.
           </p>
         </Reveal>
       </div>
@@ -38,7 +39,7 @@ export default function LocationMap() {
               <Icon name="clock" />
               <div>
                 <h4>Service Times</h4>
-                <p>Sun 7:30 &amp; 9:30 AM · Wed 5:30 PM · Fri 5:00 PM</p>
+                <p>Sun 8:00 &amp; 10:30 AM · Wed 6:00 PM · Fri 5:00 PM</p>
               </div>
             </div>
             <div className="row">
@@ -52,7 +53,12 @@ export default function LocationMap() {
                 </p>
               </div>
             </div>
-            <a className="btn btn-royal" href={MAP_DIRECTIONS_URL} target="_blank" rel="noopener noreferrer">
+            <a
+              className="btn btn-royal"
+              href={MAP_DIRECTIONS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Get Directions
               <Icon name="arrowRight" />
             </a>

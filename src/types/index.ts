@@ -16,6 +16,11 @@ export interface Ministry {
   title: string;
   description: string;
   href: string;
+  gradient: string;
+  image?: string;
+  details: string;
+  leader?: string;
+  meetingTime?: string;
 }
 
 export interface ChurchEvent {
@@ -33,6 +38,7 @@ export interface Sermon {
   speaker: string;
   date: string;
   duration: string;
+  url?: string;
 }
 
 export interface Testimonial {
