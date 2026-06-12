@@ -5,8 +5,8 @@ export const SITE = {
   motto: "Evangelical Church Winning All",
   tagline: "To God be the glory.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ecwapyakasa.org",
-  email: "hello@ecwapyakasa.org",
-  phone: "+234 (0) 800 000 0000",
+  email: "egccpyakasa@gmail.com",
+  phone: "+234 0913 455 1883",
 } as const;
 
 /**
@@ -29,7 +29,8 @@ export const MAP_DIRECTIONS_URL = "https://maps.app.goo.gl/WWjhz2sNBNH8Fv369";
 export const MAP_EMBED_URL = `https://maps.google.com/maps?q=${LOCATION.lat},${LOCATION.lng}&hl=en&z=17&output=embed`;
 
 export const SOCIALS = {
-  facebook: "#",
-  instagram: "#",
-  youtube: "#",
+  facebook:
+    "https://web.facebook.com/people/ECWA-Gospel-Church-Pyakasa/100069870651591/",
+  // instagram: "#",
+  youtube: "https://www.youtube.com/@PropheticEchoesBand",
 } as const;

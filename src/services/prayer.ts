@@ -1,21 +1,71 @@
+import {
+  collection,
+  addDoc,
+  deleteDoc,
+  doc,
+  query,
+  orderBy,
+  onSnapshot,
+  updateDoc,
+  serverTimestamp,
+  type Timestamp,
+} from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { db } from "@/lib/firebase";
 import type { PrayerRequest } from "@/types";
 
-/**
- * Prayer request service abstraction.
- *
- * Today this resolves locally (front-end demo). To go live, swap the body for
- * a Firestore write — the call sites never change:
- *
- *   import { firebaseApp } from "@/lib/firebase";
- *   import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
- *   const db = getFirestore(firebaseApp);
- *   await addDoc(collection(db, "prayerRequests"), { ...data, createdAt: serverTimestamp() });
- */
-export async function submitPrayerRequest(data: PrayerRequest): Promise<{ ok: boolean }> {
-  await new Promise((r) => setTimeout(r, 600));
-  if (typeof window !== "undefined") {
-    // eslint-disable-next-line no-console
-    console.info("[prayer] received (demo):", data);
+export type FirestorePrayerRequest = {
+  id: string;
+  name?: string;
+  contact?: string;
+  request: string;
+  isPrivate: boolean;
+  read: boolean;
+  createdAt?: Timestamp;
+};
+
+export async function submitPrayerRequest(
+  data: PrayerRequest
+): Promise<{ ok: boolean }> {
+  try {
+    await addDoc(collection(db, "prayerRequests"), {
+      ...data,
+      read: false,
+      createdAt: serverTimestamp(),
+    });
+    return { ok: true };
+  } catch {
+    return { ok: false };
   }
-  return { ok: true };
+}
+
+export async function markPrayerRead(id: string, read: boolean) {
+  return updateDoc(doc(db, "prayerRequests", id), { read });
+}
+
+export async function deletePrayerRequest(id: string) {
+  return deleteDoc(doc(db, "prayerRequests", id));
+}
+
+export function usePrayerRequests() {
+  const [requests, setRequests] = useState<FirestorePrayerRequest[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const q = query(
+      collection(db, "prayerRequests"),
+      orderBy("createdAt", "desc")
+    );
+    return onSnapshot(q, (snap) => {
+      setRequests(
+        snap.docs.map((d) => ({
+          id: d.id,
+          ...(d.data() as Omit<FirestorePrayerRequest, "id">),
+        }))
+      );
+      setLoading(false);
+    });
+  }, []);
+
+  return { requests, loading };
 }

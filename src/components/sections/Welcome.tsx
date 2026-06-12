@@ -1,15 +1,13 @@
 import Image from "next/image";
 import Reveal from "@/components/shared/Reveal";
 import pastorImg from "../../../public/assets/pastor_img.jpeg";
-import themeCardBg from "../../../public/assets/slide-3.jpg";
+import Theme from "../../../public/assets/theme.jpeg";
 // When the real theme banner image is ready, swap themeCardBg:
-//   import themeCardBg from "../../../public/assets/church/theme-2026.jpg";
 
 export default function Welcome() {
   return (
     <section className="welcome pad" id="welcome">
       <div className="wrap welcome-grid">
-
         {/* ── Pastor photo ── */}
         <Reveal className="welcome-visual">
           <Image
@@ -34,15 +32,16 @@ export default function Welcome() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2>
-              More than a church —<br />a family on mission.
+              More than a church
+              <br />a family on mission.
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p>
               For over two decades, ECWA Gospel Church Pyakasa has been a home
               where lives are transformed by the Word of God and the power of
-              His Spirit. We are an Evangelical Church Winning All — reaching
-              our community, raising disciples, and lifting the name of Jesus.
+              His Spirit. We are an Evangelical Church Winning All, reaching our
+              community, raising disciples, and lifting the name of Jesus.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
@@ -63,10 +62,9 @@ export default function Welcome() {
         {/* ── Yearly Theme Card ── */}
         <Reveal delay={0.25} className="welcome-theme-col">
           <div className="welcome-theme-card">
-
             {/* Full-bleed background image */}
             <Image
-              src={themeCardBg}
+              src={Theme}
               fill
               style={{ objectFit: "cover", objectPosition: "center" }}
               alt="2026 Church Theme"
@@ -92,18 +90,15 @@ export default function Welcome() {
                 <span className="wtc-deco-cross">✝</span>
                 <span className="wtc-deco-bar" />
               </div>
-              <h3 className="wtc-title">
-                [Theme Title<br />Goes Here]
-              </h3>
+              {/* <h3 className="wtc-title">What Shall It Profit a Man</h3> */}
               <p className="wtc-verse">
-                &ldquo;Scripture verse supporting the annual theme goes here.&rdquo;
+                &ldquo;Scripture verse supporting the annual theme goes
+                here.&rdquo;
               </p>
               <span className="wtc-ref">— Scripture Reference</span>
             </div>
-
           </div>
         </Reveal>
-
       </div>
     </section>
   );

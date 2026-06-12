@@ -39,7 +39,7 @@ export default function LocationMap() {
               <Icon name="clock" />
               <div>
                 <h4>Service Times</h4>
-                <p>Sun 8:00 &amp; 10:30 AM · Wed 6:00 PM · Fri 5:00 PM</p>
+                <p>Sun 8:00 - 10:30 AM · Wed 6:00 PM · Thur 6:00 PM</p>
               </div>
             </div>
             <div className="row">

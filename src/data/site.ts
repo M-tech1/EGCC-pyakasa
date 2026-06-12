@@ -67,7 +67,7 @@ export const MINISTRIES: Ministry[] = [
     gradient: "linear-gradient(150deg, #0a1c52, #1545b8)",
     details:
       "Our Children's Ministry (ages 0–12) is a vibrant, nurturing environment where every child is known by name. Through age-appropriate Bible lessons, worship, creative arts, and games, we help children build a lasting foundation in faith. We run Sunday School during both services and a midweek after-school club. All our volunteers are trained and vetted in child-safeguarding best practices — every child is safe and cherished here.",
-    leader: "Sis. [Name]",
+    // leader: "Sis. [Name]",
     meetingTime: "Sundays · Both Services",
   },
   {
@@ -79,8 +79,8 @@ export const MINISTRIES: Ministry[] = [
     gradient: "linear-gradient(150deg, #0d2264, #1e3fa0)",
     details:
       "Our Youth Ministry (ages 13–25) exists to raise a bold generation deeply rooted in Christ and prepared to impact the world. Through weekly meetings, discipleship groups, youth camps, and community outreach, we challenge young people to live out their faith with courage. We also run a university fellowship arm that connects students across campuses in Abuja.",
-    leader: "Bro. [Name]",
-    meetingTime: "Saturdays · 4:00 PM",
+    // leader: "Bro. [Name]",
+    meetingTime: "Wednesday · 6:00 PM",
   },
   {
     icon: "women",
@@ -91,8 +91,8 @@ export const MINISTRIES: Ministry[] = [
     gradient: "linear-gradient(150deg, #1a0a52, #3d1f90)",
     details:
       "The Women's Ministry — Daughters of Zion — is a sisterhood of faith where women of all ages connect, grow, and serve together. Through Bible studies, prayer retreats, mentoring, and skill-development workshops, we equip women to thrive in every role God has called them to. Monthly meetings are held on the first Saturday of each month, with quarterly retreats.",
-    leader: "Sis. [Name]",
-    meetingTime: "1st Saturday · Monthly",
+    // leader: "Sis. [Name]",
+    meetingTime: "Friday 4pm · Weekly",
   },
   {
     icon: "men",
@@ -103,20 +103,21 @@ export const MINISTRIES: Ministry[] = [
     gradient: "linear-gradient(150deg, #06122e, #0e2256)",
     details:
       "The Men's Ministry — Valiant Men — is committed to raising men of integrity who lead their families, workplaces, and community in the fear of God. We meet monthly for fellowship, prayer, and the Word. Our annual Men's Conference draws men from across the district, and our weekly accountability groups provide ongoing support for men at every stage of life. Iron sharpens iron here.",
-    leader: "Bro. [Name]",
-    meetingTime: "Last Saturday · Monthly",
+    // leader: "Bro. [Name]",
+    meetingTime: "After Sunday Service · Weekly",
   },
   {
     icon: "worship",
-    title: "Worship Ministry",
+    title: "Worship Ministry (Band & Choir)",
     description:
       "Lifting holy hands and voices, ushering the presence of God into every service.",
     href: "#",
     gradient: "linear-gradient(150deg, #0c1a52, #8a6020)",
     details:
-      "Our Worship Ministry serves as gatekeepers of God's presence in every service, leading the congregation in heartfelt, spirit-filled praise. The ministry includes the choir, band, media and sound team, and ushers — all working together to create an atmosphere where God is glorified and hearts are transformed. New member auditions and onboarding are held every quarter.",
-    leader: "Bro. [Name]",
-    meetingTime: "Rehearsals · Saturdays 2:00 PM",
+      "Our Worship Ministry serves as ushers of God's presence through music in every service, leading the congregation in heartfelt, spirit-filled praise. The ministry includes the choir, band, media and sound team, and ushers — all working together to create an atmosphere where God is glorified and hearts are transformed. New member auditions and onboarding are held every quarter.",
+    // leader: "Bro. [Name]",
+    meetingTime:
+      "Rehearsals ·Choir: Saturdays 5:00 PM  || Band: Tuesdays 6:00 PM",
   },
   {
     icon: "outreach",
@@ -127,7 +128,7 @@ export const MINISTRIES: Ministry[] = [
     gradient: "linear-gradient(150deg, #082840, #10446e)",
     details:
       "The Outreach & Missions Ministry is the hands and feet of the church in the wider community and beyond. From medical outreaches and food distribution to evangelism campaigns and prison ministry, we take the Gospel and God's love outside our walls. We also support missionaries and church-planting efforts across Nigeria through the broader ECWA network.",
-    leader: "Bro. [Name]",
+    // leader: "Bro. [Name]",
     meetingTime: "Community days · Monthly",
   },
 ];
@@ -216,7 +217,7 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const GIVING_ACCOUNT = {
-  bankName: "Guaranty Trust Bank (GTBank)",
-  accountName: "ECWA Gospel Church Pyakasa",
-  accountNumber: "0123456789",
+  bankName: "First Bank of Nigeria",
+  accountName: "ECWA Gospel Community Church Pyakasa (EGCCP)",
+  accountNumber: "2042842222",
 };

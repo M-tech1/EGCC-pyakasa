@@ -12,6 +12,7 @@ import galary2 from "../../../public/assets/gallery-2.jpeg";
 import galary3 from "../../../public/assets/gallery-3.jpeg";
 import galary4 from "../../../public/assets/gallery-4.jpeg";
 import galary5 from "../../../public/assets/gallery-5.jpeg";
+import galary6 from "../../../public/assets/gallery-6.jpeg";
 
 const SLIDES = [
   {
@@ -31,11 +32,11 @@ const SLIDES = [
     label: "Community Life",
     caption: "Growing together in fellowship",
   },
-  {
-    src: "https://picsum.photos/seed/egcc-s4/1920/1080",
-    label: "Youth & Children",
-    caption: "Raising the next generation for Christ",
-  },
+  // {
+  //   src: "https://picsum.photos/seed/egcc-s4/1920/1080",
+  //   label: "Youth & Children",
+  //   caption: "Raising the next generation for Christ",
+  // },
   {
     src: "https://picsum.photos/seed/egcc-s1/1920/1080",
     label: "Outreach Ministry",
@@ -63,7 +64,7 @@ const GALLERY = [
     src: galary5,
     label: "Praise & Worship",
   },
-  { src: "https://picsum.photos/seed/egcc-g6/800/600", label: "Church Family" },
+  { src: galary6, label: "Boys Brigade" },
 ];
 
 const PILLARS = [

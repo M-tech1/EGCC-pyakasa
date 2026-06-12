@@ -29,10 +29,7 @@ function FeatureImage({
     );
   }
   return (
-    <div
-      className="min-feat-grad"
-      style={{ background: ministry.gradient }}
-    />
+    <div className="min-feat-grad" style={{ background: ministry.gradient }} />
   );
 }
 

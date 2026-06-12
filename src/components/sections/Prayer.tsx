@@ -21,7 +21,12 @@ export default function Prayer() {
     }
     setError(false);
     setSubmitting(true);
-    const res = await submitPrayerRequest({ name, contact, request, isPrivate });
+    const res = await submitPrayerRequest({
+      name,
+      contact,
+      request,
+      isPrivate,
+    });
     setSubmitting(false);
     if (res.ok) setDone(true);
   };
@@ -38,12 +43,16 @@ export default function Prayer() {
           </Reveal>
           <Reveal delay={0.2}>
             <p>
-              You are not alone. Whatever you are facing, our prayer team would count it a privilege to stand with you in
-              faith. Share your request — in confidence, if you wish.
+              You are not alone. Whatever you are facing, our prayer team would
+              count it a privilege to stand with you in faith. Share your
+              request in confidence, if you wish.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <p className="verse">&ldquo;Cast all your anxiety on Him because He cares for you.&rdquo; — 1 Peter 5:7</p>
+            <p className="verse">
+              &ldquo;Casting all your care upon him; for he careth for
+              you.&rdquo; — 1 Peter 5:7
+            </p>
           </Reveal>
         </div>
 
@@ -55,7 +64,10 @@ export default function Prayer() {
                   <Icon name="check" />
                 </div>
                 <h3>Your request has been received.</h3>
-                <p>Our prayer team will be standing with you in faith. May the peace of God guard your heart.</p>
+                <p>
+                  Our prayer team will be standing with you in faith. May the
+                  peace of God guard your heart.
+                </p>
               </div>
             </div>
           ) : (
@@ -94,10 +106,18 @@ export default function Prayer() {
                 />
               </div>
               <label className="check">
-                <input type="checkbox" checked={isPrivate} onChange={(e) => setIsPrivate(e.target.checked)} />
+                <input
+                  type="checkbox"
+                  checked={isPrivate}
+                  onChange={(e) => setIsPrivate(e.target.checked)}
+                />
                 Keep this request private to the pastoral team only
               </label>
-              <button className="btn btn-royal" onClick={handleSubmit} disabled={submitting}>
+              <button
+                className="btn btn-royal"
+                onClick={handleSubmit}
+                disabled={submitting}
+              >
                 {submitting ? "Sending..." : "Send Prayer Request"}
                 <Icon name="send" />
               </button>

@@ -14,12 +14,20 @@ export default function PlanVisit() {
         </Reveal>
         <Reveal delay={0.2}>
           <p className="sec-sub" style={{ color: "rgba(255,255,255,.78)" }}>
-            Free parking, a warm welcome team, and a secure children&apos;s check-in. Come exactly as you are — we&apos;ll
-            take care of the rest.
+            Free parking, a warm welcome team, and a secure children&apos;s
+            check-in. Come exactly as you are, we&apos;ll take care of the rest.
           </p>
         </Reveal>
         <Reveal delay={0.3}>
-          <div style={{ marginTop: "2.4rem", display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <div
+            style={{
+              marginTop: "2.4rem",
+              display: "flex",
+              gap: "1rem",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
             <a href="#services" className="btn btn-gold">
               See Service Times
             </a>
