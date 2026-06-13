@@ -198,21 +198,21 @@ export const SERMONS: Sermon[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "I walked in broken and unsure, and I found a family that prayed with me until my breakthrough came. This church gave me back my hope.",
-    name: "Grace A.",
-    role: "Member since 2019",
+      "Every heart with Christ is a Missionary for Christ, Every heart without Christ is a Mission field that needs Christ.",
+    name: "Bro Makadi.",
+    role: "Senior Pastor, EGCC Pyakasa",
   },
   {
     quote:
-      "My children love coming here. The teaching is sound, the worship is alive, and you can feel the presence of God the moment you walk in.",
-    name: "Daniel & Esther O.",
-    role: "Members since 2021",
-  },
-  {
-    quote:
-      "Through the outreach ministry I found purpose. We are truly winning all — I've seen my own community changed by the love of Christ here.",
-    name: "Joseph M.",
+      "Faith is a living, daring confidence in God's grace, so sure and certain that a man could stake his life on it a thousand times.",
+    name: "Martin Luther.",
     role: "Outreach Volunteer",
+  },
+  {
+    quote:
+      "Through hard work, perseverance and a faith in God, you can live your dreams.",
+    name: "Ben Carson.",
+    role: "Since 2021 ",
   },
 ];
 
